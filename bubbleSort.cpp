@@ -5,7 +5,7 @@ typedef int Type;
 #define TAM 5 
 
 
-void mostrar(int array[5]);
+void mostrar(int array[TAM]);
 
 int main(){
   
