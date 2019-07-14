@@ -2,31 +2,36 @@
 using namespace std; 
 
 typedef int Type;
+#define TAM 5 
 
 
+void mostrar(int array[5]);
 
 int main(){
-
-  Type array[5]={3,9,4,5,1};
-  int i = 0,j = 0,aux = 0; 
-  for(i = 0; i<5; i++){
-    cout <<"hola"<<endl; 
-    for(j = i+1; j<5; j++){
-      if(array[i]>array[j]){
-	cout<<array[i]<<" es mayor que "<<array[j]<<endl; 
-	aux=array[j];
-	array[j]=array[i];
-	array[i]=aux; 
-      }else{} 
+  
+  Type array[TAM]={3,9,4,5,1};
+  int i = 0,j=0,aux = 0;
+  cout <<"\n\n\nArray Original\n"<<endl; 
+  mostrar(array);
+  cout <<"Procesado...\n\n"<<endl; 
+  for(j=0;j<TAM-1;j++){
+    cout << "Pasada: "<<j+1<<"  \t\t\t\t";  
+    for(i = 0; i<TAM; i++){
+      if(array[i]>array[i+1]){
+      aux=array[i];
+      array[i]=array[i+1];
+      array[i+1]=aux;
+      }
     }
-
-  }
-  
-
-  for(int i = 0; i < 5; i++){
-    cout <<array[i]<<" --"; 
-  }
-  
-cout << "array to 100 elements"<<endl; 
+    mostrar(array);
+    
+ } 
 return 0;
+}
+
+void mostrar(int array[TAM]){
+for(int i = 0; i < 5; i++){
+   cout <<array[i]<<"--"; 
+  }
+ cout << "X\n"<<endl;
 }
