@@ -4,7 +4,6 @@ using namespace std;
 typedef int Type;
 #define TAM 5 
 
-
 void mostrar(int array[TAM]);
 
 int main(){
@@ -20,7 +19,8 @@ int main(){
       aux=array[i];
       array[i]=array[i+1];
       array[i+1]=aux;
-      }
+ 
+     }
     }
     mostrar(array);
     
